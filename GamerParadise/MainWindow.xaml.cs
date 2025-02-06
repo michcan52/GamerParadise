@@ -117,14 +117,11 @@ namespace GamerParadise
         // Reemplaza este método con tu carga real (por ejemplo, desde un archivo JSON)
         private void RefreshGameButtons()
         {
-            List<ApplicationItem> apps = new List<ApplicationItem>
-            {
-                new ApplicationItem { Name = "PCSX2", Path = @"C:\Program Files\PCSX2\pcsx2-qt.exe", Arguments = "-fullscreen -bigpicture" },
-                new ApplicationItem { Name = "Otro Juego", Path = @"C:\Path\OtroJuego.exe", Arguments = "-opcion1 -opcion2" }
-            };
+            // Carga las aplicaciones desde el archivo JSON
+            var config = AppConfig.Load();
+            lbGameButtons.ItemsSource = config.Applications;
 
-            lbGameButtons.ItemsSource = apps;
-            if (apps.Count > 0)
+            if (config.Applications.Count > 0)
                 lbGameButtons.SelectedIndex = 0;
         }
 

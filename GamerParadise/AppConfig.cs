@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using Newtonsoft.Json;
 
@@ -10,7 +11,7 @@ namespace GamerParadise
     // Clase que contiene la lista de aplicaciones y métodos para persistir la configuración
     public class AppConfig
     {
-        public List<ApplicationItem> Applications { get; set; } = new List<ApplicationItem>();
+        public ObservableCollection<ApplicationItem> Applications { get; set; } = new ObservableCollection<ApplicationItem>();
 
         private static readonly string configFilePath = "config.json";
 
