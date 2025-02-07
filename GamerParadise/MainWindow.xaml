@@ -75,7 +75,7 @@
                         <DataTemplate>
                             <!-- Cada ítem se muestra como un botón que se estira para ocupar el contenedor -->
                             <Button Content="{Binding Name}"
-                      FontSize="24"
+                      FontSize="50"
                       Padding="10"
                       Margin="5"
                       HorizontalAlignment="Stretch"
